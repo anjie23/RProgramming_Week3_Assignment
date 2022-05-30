@@ -2,10 +2,7 @@
 ## functions do
 
 ## This function follows the same structure as the sample solution and creates a list that contains a function to:
-## set the value of the vector
-## get the value of the vector
-## set the value of the matrix
-## get the value of the matrix
+## get and set the value of a matrix, and then get and set the value of the inverse of that matrix. 
 
 makeCacheMatrix <- function(x = matrix()) {
      m <- NULL
@@ -22,8 +19,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function calculates the inverse of the matrix created by Function #1, but first checks to see if (and retrieves) 
-## the matrix has already been calculated in order to avoid a computation step.
+## This function calculates the inverse of a matrix, but first checks to see if (and retrieves) 
+## the matrix has already been calculated. If the matrix has already been calculated (and cached), 
+## then this function simply retrieves the matrix, avoiding a computation step. If the matrix has not been
+## calculated, then the function calculates and returns the matrix inverse.
+
 
 cacheSolve <- function(x, ...) {
         m <- x$getinverse()
